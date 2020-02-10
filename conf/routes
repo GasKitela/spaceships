@@ -1,0 +1,28 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+POST    /xl-spaceship/protocol/game/new      controllers.SimulationController.receiveNewGameRequest
+
+POST    /xl-spaceship/user/game/new          controllers.UserController.sendNewGameRequest
+
+POST    /user/new                            controllers.UserController.createNewUser
+
+GET     /xl-spaceship/user/game/:id          controllers.UserController.gameStatus(id)
+
+PUT     /xl-spaceship/protocol/game/:id      controllers.SimulationController.receiveSalvo(id)
+
+PUT     /xl-spaceship/user/game/:id/fire     controllers.UserController.sendSalvo(id)
+
+#GET     /employee                            controllers.HomeController.getEmployee
+
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
