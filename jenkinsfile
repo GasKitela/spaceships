@@ -1,3 +1,5 @@
+#!groovy
+
 pipeline {
     agent any
 
@@ -5,7 +7,7 @@ pipeline {
         stage('Build Assets') {
             agent any
             steps {
-                echo 'Building Assets...'
+                print 'Building Assets...'
             }
         }
         stage('Test') {
