@@ -14,6 +14,10 @@ class UserServiceTest extends FlatSpec with BeforeAndAfter with BeforeAndAfterAl
 
   }
 
+  "Sarasa" should "be true" in {
+    false shouldBe true
+  }
+
   "Attempt to create user when there is none" should "be successful" in {
     userService.createInstanceUser(instanceUserRequest) shouldBe Right()
   }
