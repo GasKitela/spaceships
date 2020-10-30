@@ -9,6 +9,14 @@ Spaceship game in Scala
 * Scala 2.12.2
 * sbt 0.13.17
 
+#Considerations
+
+One of the restrictions of this assignment was that we couldn't require the user to install anything extra to run this. They should be able to just run it, and be able to play. That's the reason why I had to go to mutability at some points, to "simulate" a DB using an Object and modifying it on the run.
+
+What I'm trying to say, is that we know mutability in Scala is baaaaad.
+
+A good iteration for this project would be migrating everything to a model with an actual persistence method, and delete every last trace of mutability.
+
 #Usage
 
 
